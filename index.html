@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.0/mapbox-gl.js"></script>
+  <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.0/mapbox-gl.css" rel="stylesheet" />  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <link rel="stylesheet" href="index.css">
+  <title>fancy-weather</title>
+</head>
+
+<body>
+  <div id="preloader" class="visible"></div>
+  <main class="container">
+    <div class="header">
+      <button id="loader" class="b1"></button>
+      <a href="#eng"><button id="language" class="b2">en</button></a>
+      <a href="#ru"><button id="language-ru" class="b3">ru</button></a>
+      <a href="#be"><button id="language-be" class="b4">be</button></a></button>
+      <button class="b5 fahrenheit" id="fahrenheit">&#8457</button>
+      <button class="b6 celsius" id="celsius">&#8451</button>
+      <input class="geocoder" placeholder="enter location" id="searchInput"></input>
+      <button id="searchButton">search</button>
+    </div>
+      
+
+    </div>
+    <div class="current-location">
+      <div class="current-location_weather">
+        <div class="city-country">
+          <h1 class="city-name" id="city">Samara,</h1>
+          <h2 class="country-name" id="country">Russia</h2>
+        </div>
+        <div class="date-time">
+          <div id="dateName">date</div>
+          <div id="time-name">time</div>
+        </div>
+        <div class="temperature">
+          <h2 class="temperature-degree" id="temp">-6</h2>
+          <span class="temperature-degree_unix" id="tempUnix">&#176</span>
+          <div>
+              <canvas class="icon" width="128" height="128"></canvas>
+              <div class="summary">
+                  <div class="temperature-description" id="descriptionTemp">its cold</div>
+                  <div class="cels-unix">
+                    <div class="apparent-temperature" id="apparentTemp">1</div>
+                    <span>&#176</span>
+                  </div>
+                  <div class="speed-wind" id="speedWind">-2</div>
+                  <div class="humidity" id="humidity">-3</div>
+                </div>
+          </div>
+         
+        </div>
+
+        <div class="weather-day">
+          <div class="tommorow">
+            <div class="date-name_tomorrow" id="dateO">Tommorow</div>
+            <div class="temperature-tomorrow">
+              <h2 class="temperature-tomorrow-degree" id="temp0">4</h2>
+              <span class="temperature-tomorrow-degree_unix" id="tempUnix1">&#176</span>
+              <canvas class="icon-tomorrow" width="30" height="30"></canvas>
+            </div>
+          </div>
+          <div class="tommorow">
+            <div class="date-name_tomorrow1" id="dateT">Tommorow</div>
+            <div class="temperature-tomorrow">
+              <h2 class="temperature-tomorrow-degree1" id="tempT">3</h2>
+              <span class="temperature-tomorrow-degree_unix" id="tempUnix2">&#176</span>
+              <canvas class="icon-tomorrow1" width="30" height="30"></canvas>
+            </div>
+          </div>
+          <div class="tommorow">
+            <div class="date-name_tomorrow2" id="dateF">Tommorow</div>
+            <div class="temperature-tomorrow">
+              <h2 class="temperature-tomorrow-degree2" id="tempF">4</h2>
+              <span class="temperature-tomorrow-degree_unix" id="tempUnix3">&#176</span>
+              <canvas class="icon-tomorrow2" width="30" height="30"></canvas>
+            </div>
+          </div>
+          
+        </div>
+        <div class="geolocation">
+            <div class="lattitude" id="lattitude">44,232323</div>
+            <div class="longitude" id="longitude">50,456346</div>
+        </div>
+      </div>
+
+      <div id='map'></div>
+    </div>
+  </main>
+  <div id="container"></div>
+  <script type="module" src="app.js"></script>
+</body>
+
+</html>
